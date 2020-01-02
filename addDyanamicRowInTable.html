@@ -1,0 +1,46 @@
+<html>
+
+<head>
+    <script>
+        function addRowToTable() {
+            var tableEle=document.getElementById("mytable");
+                var row=tableEle.insertRow(1);
+                var cell1=row.insertCell(0);
+                var cell2=row.insertCell(1);
+                var cell3=row.insertCell(2);
+                var vprn=document.getElementById("prn").value;
+                var vname=document.getElementById("name").value;
+                var vmarks=document.getElementById("marks").value;
+                cell1.innerHTML=vprn;
+                cell2.innerHTML=vname;
+                cell3.innerHTML=vmarks;
+        }
+
+    </script>
+</head>
+
+<body>
+    
+    <input type="text" placeholder="enter PRN" id="prn">
+    <input type="text" placeholder="enter Name" id="name">
+    <input type="text" placeholder="enter Marks" id="marks">
+    <button type="button" onclick="addRowToTable();">Add Entry</button><br>
+    <p></p>
+    <table border="1" id="mytable">
+        <tr>
+            <td>PRN</td>
+            <td>Name</td>
+            <td>Percentage</td>
+        </tr>
+    </table>
+
+    How often you watch movie in week : </label><input id="movie" type="number" value="0"/>
+    cars:<select name="cars">
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <option value="fiat">Fiat</option>
+        <option value="audi">Audi</option>
+      </select>
+</body>
+
+</html>

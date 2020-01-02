@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script>
+        function even()
+        {
+            var evenums;
+            var start=document.getElementById("start").value;
+            var end=document.getElementById("end").value;
+            for(var i=start;i<=end;i++)
+            {
+                if(i%2==0)
+                evenums+=i+"<br>";
+            }
+            var content=document.getElementById("show-data");
+            content.innerHTML=evenums;
+         }
+         function odd()
+        {
+            var oddnums;
+            var start=document.getElementById("start").value;
+            var end=document.getElementById("end").value;
+            for(var i=start;i<=end;i++)
+            {
+                if(i%2!=0)
+                oddnums+=i+"<br>";
+            }
+            var content=document.getElementById("show-data");
+            content.innerHTML=oddnums;
+         }
+    </script>
+</head>
+<body>
+<div style="height: 300px; width: 50%;text-align: center;margin-left: 30px;margin-right:30px;background-color: goldenrod; overflow: scroll;">
+    <input type="text" placeholder="Start" id="start">
+    <input type="text"placeholder="end" id="end">
+    <button onclick="even()">Get Even number</button>
+    <button onclick="odd()">Get Odd number</button>
+    <div id="show-data">
+
+    </div>
+</div>
+
+</body>
+</html>

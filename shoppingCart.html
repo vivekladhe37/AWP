@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<head>
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: bold;
+        }
+    </style>
+    <script>
+        {
+            item=[];
+            var cell1,cell2,cell3,row;
+            var count=0;
+            function addToCart(abc,val)
+            {
+                var tableEle=document.getElementById("mytable");
+                if(!item.includes(abc))
+                    {
+                    count=0;
+                    row=tableEle.insertRow(1);
+                    cell1=row.insertCell(0);
+                    cell2=row.insertCell(1);
+                    cell3=row.insertCell(2);
+                    cell1.innerHTML=abc;
+                    count++;
+                    cell2.innerHTML=count;
+                    cell3.innerHTML=val*count;
+                 }
+                 else
+                {
+                    count++;
+                    cell2.innerHTML=count;
+                    cell3.innerHTML=val*count;
+                }
+                item.push(abc);
+                
+            }
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <div>
+            <table align="center" border="1">
+            <tr>
+                <td>Item</td>
+                <td>price</td>
+                <td>Add to Cart</td>
+            </tr>
+            <tr>
+                <td><img src="i1.jpg" height="50%"></td>
+                <td>1000.00</td>
+                <td><button onclick="addToCart('<img src=i1.jpg height=50%>',1000)">Add to cart</button></td>
+            </tr>
+            <tr>
+                    <td><img src="i2.jpg" height="50%"></td>
+                    <td>800.00</td>
+                    <td><button onclick="addToCart('<img src=i2.jpg height=50%>',800)">Add to cart</button></td>
+
+                </tr>
+                <tr>
+                        <td><img src="i3.jpg" height="50%"></td>
+                        <td>700.00</td>
+                        <td><button onclick="addToCart('<img src=i3.jpg height=50%>',700)">Add to cart</button></td>
+
+                    </tr>
+                </table>
+        </div>
+        <p></p><p></p><p></p>
+        <div>
+            <table id="mytable" align="center" border="1">
+                <tr>
+                    <td>Item</td>
+                    <td>Quantity</td>
+                    <td>Price</td>
+                </tr>
+            </table>
+        </div>
+    </div>  
+</body>
+</html>

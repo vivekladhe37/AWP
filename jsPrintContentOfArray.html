@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script>
+        function print()
+        {var a=[1,2,3,4,56,7];
+        Elements=a.toString();
+        document.getElementById("show").innerHTML=Elements;
+        }
+        
+    </script>
+    <style>
+        body
+        {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="show" style="height: 300px; width: 50%;text-align: center;margin-left: 30px;margin-right:30px;background-color: goldenrod;">
+        <button onclick="print()">Elements of array</button> 
+    </div>
+</body>
+</html>

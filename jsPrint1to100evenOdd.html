@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<script>
+    function even()
+    { 
+        var enums;
+        for(var i=0;i<100;i++)
+        {  if(i%2==0)
+        enums=enums+i+"<br>";
+        }
+        var content=document.getElementById("even-div");
+        content.innerHTML=enums;
+    }
+    function odd()
+    { 
+        var enums;
+        for(var i=0;i<100;i++)
+        {  if(i%2!=0)
+        enums=enums+i+"<br>";
+        }
+        var content=document.getElementById("even-div");
+        content.innerHTML=enums;
+    }
+</script>
+<style>
+    body
+    {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bold;    }
+</style>
+<body>
+    <div style="height: 300px; width: 50%;text-align: center;margin-left: 30px;margin-right:30px;background-color: goldenrod; overflow: scroll;">
+        <button onclick="even()">Get Even</button>
+        <button onclick="odd()">Get odd</button>
+        <div id="even-div">
+            
+        </div>
+    </div>
+</body>
+</html>

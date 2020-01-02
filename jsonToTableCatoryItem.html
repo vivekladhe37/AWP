@@ -1,0 +1,86 @@
+<html>
+<head>
+    <style>
+    table, th, td {
+            border: 5px solid rgb(124, 124, 124);
+            border-collapse: collapse;
+            
+        }
+        tr:nth-child(even) {
+            background-color: rgb(108, 169, 194)
+        }     
+    </style>
+    <script>
+     function createTableFromJson()
+     {
+         var shoppingItem=[{
+		"Itemname": "Shoe",
+		"Price": "2500",
+		"Category": "personal"
+	},
+	{
+		"Itemname": "T-Shirt",
+		"Price": "1500",
+		"Category": "Garments"
+	},
+	{
+		"Itemname": "Book - ignited minds",
+		"Price": "350",
+		"Category": "Stationary"
+	}
+]   
+   var colName=[];
+   colName[0]="";
+   for(var i=0;i<=shoppingItem.length;i++)
+   {
+       for(var k in shoppingItem[i])
+       {
+           if(colName.indexOf(k) === -1)
+           {
+               colName.push(k);
+           }
+       }
+   }
+
+   var table = document.createElement("table");
+   var tr=table.insertRow(-1);
+
+   for(var i=0;i<colName.length;i++)
+   {
+       var th=document.createElement("th");
+        th.innerHTML=colName[i];
+        tr.appendChild(th);
+   }
+   
+   for(var i=0;i<shoppingItem.length;i++)
+   {
+       tr=table.insertRow(-1);
+       for(var j=0;j<colName.length;j++)
+       {   
+           var tableCell=tr.insertCell(-1);
+           if(j==0)
+            {
+                 var chkbox = document.createElement("input");
+                 chkbox.type = "checkbox";
+                 chkbox.id="chkid";
+                 tableCell.appendChild(chkbox);
+            }
+            else
+            {
+              tableCell.innerHTML=shoppingItem[i][colName[j]];
+            }
+       }
+   }
+
+   var divTable=document.getElementById("showDiv");
+   divTable.innerHTML="";
+   divTable.appendChild(table);
+
+     }
+    </script>
+</head>
+<body>
+    <button onclick="createTableFromJson();" >Add To Table</button>
+     <div id="showDiv"></div>
+</body>
+</html>

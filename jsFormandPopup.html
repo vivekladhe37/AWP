@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <title>Document</title>
+ <style>
+    .div-header {
+        background-color: lightblue;
+        height: 100%;
+        width: 100%;
+
+    }
+
+    .first-div {
+        height: 92.5%;
+        width: 90%;
+        text-align: center;
+        background-color: gainsboro;
+        margin: 0 auto;
+    }
+
+    .left-col {
+        text-align: right;
+        font-weight: bold;
+    }
+
+    .right-col {
+        font-weight: bold;
+    }
+
+    .table {
+        align-items: center;
+    }
+
+    td {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+</style>
+ 
+ 
+ <script>
+     function submit()
+     {
+         alert("name:"+document.getElementById("name").value+"\n"+
+         "Email:"+document.getElementById("email").value+"\n"+
+         "age:"+document.getElementById("age").value+"\n"+"role:"+
+         document.getElementById("role").value+"\n"+
+         "feedback:"+document.querySelector('input[name = abc]:checked').value
+         +"\n"+"platform:"+document.getElementById("platform").value+"\n"      );
+     }
+ </script>
+</head>
+<body>    
+    <div class="div-header">
+        <h2 style="text-align: center; ">Survey Form</h2>
+        <div class="first-div">
+            <h3>Let us know how we can improve freeCodeCamp</h3>
+            <table align="center">
+                <tr>
+                    <td class="left-col">Name:</td>
+                    <td class="right-col"> <input type="text" placeholder="Enter your name" id="name" size="20"></td>
+                </tr>
+                <tr>
+                    <td class="left-col">Email:</td>
+                    <td class="right-col"><input type="text" placeholder="Enter your Email" id="email" size="20"></td>
+                </tr>
+                <tr>
+                    <td class="left-col">Age:</td>
+                    <td class="right-col"><input type="number" placeholder="Enter your Age" id="age" size="20"></td>
+                </tr>
+
+                <tr>
+                    <td class="left-col">Which options describes your current role?</td>
+                    <td class="right-col"> <select id="role">
+                            <option value="Student">Student</option>
+                            <option value="Developer">Developer</option>
+                            <option value="Tester">Tester</option>
+                            <option value="Database Administer">Database Administer</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="left-col">How likely is that you would recommend <br>freeCode to your friend</td>
+                    <td class="right-col">
+                        <input type="radio" name="abc" value="Definately"> Definately<br>
+                        <input type="radio" name="abc" value="May be"> May be<br>
+                        <input type="radio" name="abc" value="Not sure"> Not sure<br>
+                    </td>
+                </tr>
+
+
+
+                <tr>
+                    <td class="left-col">What Do you like most in freeCodeCamp</td>
+                    <td class="right-col"> <select id ="platform">
+                            <option  value="Platform">Platform</option>
+                            <option  value="Teaching">Teaching</option>
+                            <option  value="Study material">Study material</option>
+                        </select>
+                    </td>
+                </tr>
+
+
+
+                <tr>
+                    <td class="left-col">Things that be improved in future:</td>
+                    <td class="right-col" id="chk">
+                        <input type="checkbox" value="Front-end projects" name="check"> Front-end projects<br>
+                        <input type="checkbox" value="Back-end projects"  name="check"> Back-end projects<br>
+                        <input type="checkbox" value="Data Visulations"  name="check">Data Visulations<br>
+                    </td>
+                </tr>
+
+            </table>
+
+        </div>
+        <div><button onclick="submit()">Submit</button></div>
+    </div>
+
+
+</body>
+</html>

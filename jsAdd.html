@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   
+    <title>Document</title>
+    <script>
+        function add()
+        {
+            var x=parseInt(document.getElementById("first").value);
+            var y=  parseInt(document.getElementById("second").value);
+            ans=x+y;
+            document.getElementById("res").value=ans;
+        }
+    </script>
+    
+</head>
+<body>
+    <div style="height: 300px; width: 50%;margin-left: 30px;margin-right:30px;background-color: goldenrod;">
+     <table align="center" style="margin-top: 10px;">
+       <tr> 
+           <td><input type="text" placeholder="Enter first number" id="first"><br>
+           </td> 
+        </tr>
+        <tr>
+            <td>
+                <input type="text" placeholder="Enter second number" id="second"><br>
+            </td>
+        </tr>
+       <tr>
+           <td>
+            <button onclick="add()">Add</button>
+           </td>
+       </tr>
+        <tr>
+            <td>
+                <input type="text" id="res">
+            </td>
+        </tr>
+    </table>
+    
+        
+    </div>
+</body>
+</html>

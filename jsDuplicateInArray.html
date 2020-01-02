@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script>
+        function findDuplicates()
+        {
+           var a=[1,2,3,3,3,4,6,2,1,1];
+           var duplicate=[];
+           for(var i=0;i<a.length;i++)
+           {
+               for(var j=i+1;j<a.length-1;j++)
+               {
+                   if(a[i]==a[j])
+                   {
+                   if(!(duplicate.includes(a[i])))
+                    duplicate.push(a[i]);
+                    break;
+                   }
+               }
+           }
+           document.getElementById("show").innerHTML=duplicate.toString();
+        }
+    </script>
+    <style>
+        body
+        {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="show" style="height: 300px; width: 50%;text-align: center;margin-left: 30px;margin-right:30px;background-color: goldenrod;">
+    
+        <button onclick="findDuplicates()">Find Duplicates</button>
+        <br>
+    </div>
+</body>
+</html>

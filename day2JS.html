@@ -1,0 +1,33 @@
+<html>
+<head>
+    <script>
+        var studentArray=["renu","shweta","avanti"]
+        function addToList()
+        {
+            var name=document.getElementById("stdname").value;
+            studentArray.push(name);
+            var i=0;
+            var content ="<ul>"
+            for( i=0;i<studentArray.length;i++)
+            { 
+            content=content+"<li>"+studentArray[i]+"</li>"
+            }
+            content=content+"</ul>"
+            var list=document.getElementById("studentList");
+            list.innerHTML=content;
+
+        }
+    </script>
+</head>    
+<body>
+    Enter the name<input type="text" id="stdname">
+    <button onclick="addToList();">Add to list</button>
+    <div id="studentList">
+    <ul>
+        <li>vivek</li>
+        <li>renu</li>
+        <li>lalit</li>
+    </ul>
+    </div>
+</body>
+</html>
